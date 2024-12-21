@@ -9,19 +9,17 @@ const Gallery = () => {
   const images = [image1, image2, image3, image4, image5, image6];
 
   return (
-    <div className="flex justify-center text-center">
-      <section className="grid grid-cols-3 md:grid-cols-2 gap-4 p-4">
-        {images.map((image, index) => (
-          <div key={index}>
-            <img
-              src={image}
-              alt={`Gallery ${index}`}
-              className="w-68 h-36 object-cover m-2"
-            />
-          </div>
-        ))}
-      </section>
-    </div>
+    <section className="grid grid-cols-1 sm:grid-cols-2 sm:ml-24 lg:grid-cols-2 gap-2 p-4">
+      {images.map((image, index) => (
+        <div key={index} className=" flex justify-center">
+          <img
+            src={image}
+            alt={`Gallery ${index}`}
+            className="full h-36 object-cover m-2"
+          />
+        </div>
+      ))}
+    </section>
   );
 };
 

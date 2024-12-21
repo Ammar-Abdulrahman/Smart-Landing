@@ -2,11 +2,11 @@ import googleApp from "../Assets/images/googleplay.png";
 import appStore from "../Assets/images/appStore.png";
 import Logo from "../Assets/images/Logo.png";
 import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
-import { MdOutlineEmail } from "react-icons/md";
+import { FaLocationDot, FaXTwitter } from "react-icons/fa6";
 import { FiPhone } from "react-icons/fi";
 import veactor3 from "../Assets/images/Vector3.png";
 import veactor4 from "../Assets/images/Vector4.png";
+import { Link } from "react-router-dom";
 
 const FooterComponent = () => {
   return (
@@ -33,13 +33,13 @@ const FooterComponent = () => {
 
       <div className="flex justify-center text-center mt-5">
         <nav className="flex gap-7 text-white">
-          <a href="#" className="hover:underline">
+          <Link to="/about" className="hover:underline">
             Privacy Policy
-          </a>
-          <a href="#" className="hover:underline">
+          </Link>
+          <a href="#contact-us" className="hover:underline">
             Contact With Us
           </a>
-          <a href="#" className="hover:underline">
+          <a href="#our-services" className="hover:underline">
             Our Services
           </a>
         </nav>
@@ -57,21 +57,15 @@ const FooterComponent = () => {
       </div>
 
       <div className="flex justify-center text-center mt-2">
-        <button
-          type="button"
-          className="text-white hover:bg-blue-950 focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center me-2 mb-2"
-        >
-          <MdOutlineEmail className="text-white w-4 h-4 me-2" />
-          s@gmail.com{" "}
-        </button>
+        <div className="text-white hover:bg-blue-950 focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center me-2 mb-2">
+          <FaLocationDot className="text-white w-4 h-4 me-2" />
+          Innsbruker Straße 19, 6300, Wörgl
+        </div>
 
-        <button
-          type="button"
-          className="text-white hover:bg-blue-950 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center me-2 mb-2"
-        >
+        <div className="text-white hover:bg-blue-950 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center me-2 mb-2">
           <FiPhone className="text-white w-4 h-4 me-2" />
-          +322442212{" "}
-        </button>
+          00436602923444
+        </div>
       </div>
 
       <div className="h-16"></div>

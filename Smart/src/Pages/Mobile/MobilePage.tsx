@@ -14,10 +14,10 @@ const MobilePage = () => {
             </h2>
           </div>
 
-          <div className="m-8 mb-0 mt-20 flex justify-center text-center">
-            <img src={screen3} className="w-64 -mr-14 " />
-            <img src={screen1} className="w-64 z-50" />
-            <img src={screen2} className="w-64 -ml-14" />
+          <div className="m-8 mb-1 mt-20 flex justify-center text-center">
+            <img src={screen3} className="-mr-10 sm:w-48 lg:w-64 md: w-32 " />
+            <img src={screen1} className="z-50 sm:w-48 lg:w-64 md: w-32" />
+            <img src={screen2} className="-ml-7 sm:w-48 lg:w-64 md: w-32" />
           </div>
         </div>
       </div>

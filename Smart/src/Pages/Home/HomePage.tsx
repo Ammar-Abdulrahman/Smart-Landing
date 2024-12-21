@@ -1,4 +1,3 @@
-import Header from "./Components/Header";
 import HeroSection from "./Components/HeroSection";
 import Gallery from "./Components/Gallery";
 import Footer from "./Components/Footer";
@@ -17,32 +16,31 @@ const HomePage = () => {
         <img
           src={veactor1}
           alt="Decorative Line Top Right"
-          className="absolute top-0 right-0 w-1/3 max-w-sm pointer-events-none"
+          className="absolute top-0 right-0 w-1/3 max-w-sm pointer-events-none hidden sm:block"
         />
 
-        {/* Bottom-Left Line */}
         <img
           src={veactor2}
           alt="Decorative Line Bottom Left"
-          className="absolute -bottom-52 left-0 w-1/3 max-w-sm pointer-events-none"
+          className="absolute -bottom-52 left-0 w-1/3 max-w-sm pointer-events-none hidden sm:block"
         />
-        <Header />
-        <div className="flex mt-4 p-4">
-          <div className="w-5/6 -mr-32 justify-center text-center">
+
+        <div className="flex flex-col sm:flex-row p-4">
+          <div className="sm:w-[600px] justify-center text-center">
             <Gallery />
           </div>
-          <div className="w-2/3 mr-20 justify-center text-center">
+          <div className="sm:w-2/3 sm:mr-20 justify-center text-center">
             <HeroSection />
             <Footer />
           </div>
         </div>
       </div>
 
-      <div className="m-8 p-8">
+      <div id="our-services" className="m-8 p-8">
         <OurServicesPage />
       </div>
 
-      <div className="m-8 p-8">
+      <div id="contact-us" className="m-8 p-8">
         <ContactUsPage />
       </div>
 
@@ -50,7 +48,7 @@ const HomePage = () => {
         <CustomerPage />
       </div>
 
-      <div className="mt-40 rounded-full ">
+      <div className="mt-20 rounded-full ">
         <MobilePage />
       </div>
 

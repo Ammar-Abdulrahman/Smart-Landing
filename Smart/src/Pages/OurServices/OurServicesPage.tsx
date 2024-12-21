@@ -6,7 +6,11 @@ const OurServicesPage = () => {
     <div className="bg-[#fff] max-w-[1440px] mx-auto max-h-screen justify-center text-center">
       <h2 className=" text-black text-lg font-bold ">Our services</h2>
 
-      <div className="w-[80%] m-auto">
+      {/* <div className="w-[80%] m-auto">
+        <CarouselComponent slides={SlidesArray} />
+      </div> */}
+
+      <div className="w-[90%] sm:w-[80%] mx-auto">
         <CarouselComponent slides={SlidesArray} />
       </div>
     </div>

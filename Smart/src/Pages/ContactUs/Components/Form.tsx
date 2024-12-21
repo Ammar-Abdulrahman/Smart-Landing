@@ -3,10 +3,10 @@ import arrowImage from "../../../Assets/images/triangle.png";
 
 const ContactForm = () => {
   return (
-    <div className="grid grid-cols-2 items-center justify-center min-h-screen bg-white p-4">
+    <div className="grid md:grid-cols-1 lg:grid-cols-2 items-center justify-center min-h-screen sm:grid-cols-1 bg-white p-4">
       {/* Card with blue shadow */}
       <div
-        className=" bg-white rounded-lg p-6 sm:p-8 w-full max-w-lg"
+        className=" bg-white rounded-lg p-6 sm:p-8 w-[380px] md:w-[400px] lg:w-[500px] sm:w-[400px] max-w-[1050px]"
         style={{
           boxShadow: `-15px 20px 25px #0045B24D`, // Shadow color passed dynamically
         }}
@@ -85,21 +85,21 @@ const ContactForm = () => {
         <img
           src={waveImage} // Replace with your wave image
           alt="first-wave"
-          className=" top-3/4  ml-56 w-32 sm:max-w-none "
+          className=" top-3/4  ml-56 w-32 sm:max-w-none pointer-events-none hidden sm:block"
         />
 
         {/* Second Wave Image */}
         <img
           src={waveImage} // Replace with second wave image
           alt="second-wave"
-          className=" top-3/4 mt-8 ml-24 left-0 w-32 sm:max-w-none"
+          className=" top-3/4 mt-8 ml-24 left-0 w-32 sm:max-w-none pointer-events-none hidden sm:block"
         />
 
         {/* Arrow Image */}
         <img
           src={arrowImage} // Replace with arrow image
           alt="arrow"
-          className=" mt-32 right-0 w-56 sm:max-w-none"
+          className=" mt-32 right-0 w-56 sm:max-w-none pointer-events-none hidden sm:block"
         />
       </div>
     </div>
