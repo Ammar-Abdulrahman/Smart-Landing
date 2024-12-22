@@ -8,7 +8,7 @@ const CustomerPage = () => {
         Customer opinion
       </h2>
 
-      <div className="flex grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="flex justify-center grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-4">
         <Card cards={CardArray} />
       </div>
     </div>

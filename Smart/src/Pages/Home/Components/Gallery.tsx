@@ -9,7 +9,7 @@ const Gallery = () => {
   const images = [image1, image2, image3, image4, image5, image6];
 
   return (
-    <section className="grid grid-cols-1 sm:grid-cols-2 sm:ml-24 lg:grid-cols-2 gap-2 p-4">
+    <section className="grid grid-cols-2  sm:ml-24  gap-2 p-4">
       {images.map((image, index) => (
         <div key={index} className=" flex justify-center">
           <img

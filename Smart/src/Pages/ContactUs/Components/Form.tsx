@@ -6,7 +6,7 @@ const ContactForm = () => {
     <div className="grid md:grid-cols-1 lg:grid-cols-2 items-center justify-center min-h-screen sm:grid-cols-1 bg-white p-4">
       {/* Card with blue shadow */}
       <div
-        className=" bg-white rounded-lg p-6 sm:p-8 w-[380px] md:w-[400px] lg:w-[500px] sm:w-[400px] max-w-[1050px]"
+        className=" bg-white rounded-lg p-6 sm:p-8 w-full  max-w-[1050px]"
         style={{
           boxShadow: `-15px 20px 25px #0045B24D`, // Shadow color passed dynamically
         }}
@@ -23,7 +23,7 @@ const ContactForm = () => {
             <div>
               <label
                 htmlFor="name"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-sm mt-1 font-medium text-gray-700"
               >
                 Name
               </label>
@@ -39,7 +39,7 @@ const ContactForm = () => {
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-sm font-medium mt-1 text-gray-700"
               >
                 Email
               </label>
@@ -55,7 +55,7 @@ const ContactForm = () => {
             <div>
               <label
                 htmlFor="message"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-sm font-medium mt-1 text-gray-700"
               >
                 Your message
               </label>
@@ -63,7 +63,7 @@ const ContactForm = () => {
                 id="message"
                 rows={3}
                 placeholder="Type your message"
-                className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                className="mt-2 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
               ></textarea>
             </div>
 
@@ -71,7 +71,7 @@ const ContactForm = () => {
             <div>
               <button
                 type="submit"
-                className="w-full rounded-md bg-purple-600 px-4 py-2 text-white shadow-md hover:bg-purple-700 focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
+                className="w-full mt-2 rounded-md bg-purple-600 px-4 py-2 text-white shadow-md hover:bg-purple-700 focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
               >
                 Send
               </button>
@@ -92,14 +92,14 @@ const ContactForm = () => {
         <img
           src={waveImage} // Replace with second wave image
           alt="second-wave"
-          className=" top-3/4 mt-8 ml-24 left-0 w-32 sm:max-w-none pointer-events-none hidden sm:block"
+          className=" top-3/4 mt-5 ml-24 left-0 w-32 sm:max-w-none pointer-events-none hidden sm:block"
         />
 
         {/* Arrow Image */}
         <img
           src={arrowImage} // Replace with arrow image
           alt="arrow"
-          className=" mt-32 right-0 w-56 sm:max-w-none pointer-events-none hidden sm:block"
+          className=" mt-28 right-0 w-56 sm:max-w-none pointer-events-none hidden sm:block"
         />
       </div>
     </div>

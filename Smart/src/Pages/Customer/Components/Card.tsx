@@ -17,7 +17,7 @@ const Card: React.FC<ComponentProps> = ({ cards }) => {
     <div className="flex flex-wrap justify-center gap-4">
       {cards.map((card: CardProps) => (
         <div
-          className={`bg-white border w-72 sm:w-72 lg:w-64 m-2 p-4 rounded-lg`}
+          className={`bg-white border w-68 sm:w-72 lg:w-64 m-2 p-4 rounded-lg`}
           style={{
             boxShadow: `-5px 10px 25px ${card.color}`,
           }}

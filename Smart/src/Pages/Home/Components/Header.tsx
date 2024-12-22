@@ -94,6 +94,13 @@ const Header = () => {
 
       {isOpen && (
         <ul className="sm:hidden justify-center text-center w-full gap-4 mt-4 p-4 rounded-md">
+          <li className="cursor-pointer" onClick={() => setIsOpen(false)}>
+            <Link
+              to="/about"
+            >
+              Privacy Policy
+            </Link>
+          </li>
           <li
             className="cursor-pointer"
             onClick={() => handleScrollToSection("our-services")}

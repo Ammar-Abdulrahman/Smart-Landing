@@ -40,11 +40,11 @@ const HomePage = () => {
         <OurServicesPage />
       </div>
 
-      <div id="contact-us" className="m-8 p-8">
+      <div id="contact-us" className="m-2 p-2">
         <ContactUsPage />
       </div>
 
-      <div className="m-8 p-8">
+      <div className="">
         <CustomerPage />
       </div>
 
