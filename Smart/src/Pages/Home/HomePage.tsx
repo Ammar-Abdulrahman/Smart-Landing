@@ -8,11 +8,18 @@ import MobilePage from "../Mobile/MobilePage";
 import FooterComponent from "../../Components/Footer";
 import veactor1 from "../../Assets/images/Vector1.png";
 import veactor2 from "../../Assets/images/Vector2.png";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const HomePage = () => {
+  const mobileRef = useRef(null);
+  const isViewMobile = useInView(mobileRef, { once: true });
+
+  const overviewRef = useRef(null);
+  const isViewOverview = useInView(overviewRef, { once: true });
   return (
     <>
-      <div className="bg-[#020A16] max-w-[1440px] mx-auto min-h-screen">
+      <div className="bg-[#020A16] max-w-[1440px] mx-auto">
         <img
           src={veactor1}
           alt="Decorative Line Top Right"
@@ -22,7 +29,7 @@ const HomePage = () => {
         <img
           src={veactor2}
           alt="Decorative Line Bottom Left"
-          className="absolute -bottom-52 left-0 w-1/3 max-w-sm pointer-events-none hidden sm:block"
+          className="absolute -bottom-[166px] left-0 w-1/3 max-w-sm pointer-events-none hidden sm:block"
         />
 
         <div className="flex flex-col sm:flex-row p-4">
@@ -36,8 +43,14 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div id="our-services" className="m-8 p-8">
-        <OurServicesPage />
+      <div id="our-services" className="m-8 p-8" ref={overviewRef}>
+        <motion.div
+          initial={{ x: -400, opacity: 0 }}
+          animate={isViewOverview ? { x: 0, opacity: 1 } : {}}
+          transition={{ duration: 0.9 }}
+        >
+          <OurServicesPage />
+        </motion.div>
       </div>
 
       <div id="contact-us" className="m-2 p-2">
@@ -48,8 +61,14 @@ const HomePage = () => {
         <CustomerPage />
       </div>
 
-      <div className="mt-20 rounded-full ">
-        <MobilePage />
+      <div className="mt-20 rounded-full" ref={mobileRef}>
+        <motion.div
+          initial={{ x: -400, opacity: 0 }}
+          animate={isViewMobile ? { x: 0, opacity: 1 } : {}}
+          transition={{ duration: 0.9 }}
+        >
+          <MobilePage />
+        </motion.div>
       </div>
 
       <div className="">

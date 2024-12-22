@@ -3,7 +3,7 @@ import appStore from "../../../Assets/images/appStore.png";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col sm:flex-row justify-center items-center gap-4 py-6 bg-transparent text-white">
+    <footer className="flex flex-row justify-end items-center gap-4 py-6 bg-transparent text-white">
       <a href="/">
         <img src={appStore} alt="App Store" className="w-32" />
       </a>
