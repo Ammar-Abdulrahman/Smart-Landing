@@ -9,12 +9,12 @@ import { motion } from "framer-motion";
 
 const Gallery = () => {
   const images = [
-    { image: image1, style: "w-64 h-40 -mr-8" },
-    { image: image2, style: "w-32 h-40 -ml-8" },
-    { image: image3, style: "w-64 h-40 -mr-8" },
-    { image: image4, style: "w-32 h-40 -ml-8" },
-    { image: image5, style: "w-64 h-40 -mr-8" },
-    { image: image6, style: "w-32 h-40 -ml-8" },
+    { image: image1, style: "w-64 h-40" },
+    { image: image2, style: "w-44 h-40" },
+    { image: image3, style: "w-64 h-40" },
+    { image: image4, style: "w-44 h-40" },
+    { image: image5, style: "w-64 h-40" },
+    { image: image6, style: "w-44 h-40" },
   ];
 
   const [isAnimating, setIsAnimating] = useState(false);
@@ -28,10 +28,10 @@ const Gallery = () => {
   }, []);
 
   return (
-    <section className="grid grid-cols-2 gap-1 sm:ml-24 p-4">
+    <section className="grid grid-cols-2 gap-0 sm:ml-24 p-4">
       {images.map((image, index) => (
         <motion.div
-          animate={{ margin: isAnimating ? '7px' : '0px' }}
+          animate={{ scale: isAnimating ? 0.9 : 1 }}
           transition={{ duration: 0.9, ease: "easeInOut" }}
           key={index}
           className=" flex justify-center"
@@ -39,8 +39,8 @@ const Gallery = () => {
           <img
             src={image.image}
             alt={`Gallery ${index}`}
-            className={`${image.style} mt-1 mb-1`}
-          />
+            className={`${image.style} m-1`}
+            />
         </motion.div>
       ))}
     </section>

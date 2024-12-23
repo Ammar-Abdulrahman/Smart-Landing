@@ -22,7 +22,7 @@ export const SlidesArray = [
     title: "Comprehens ive control panel",
     color: "bg-[#0045B2]",
     style: "mt-4 -mr-3 w-24",
-    style2: "-mt-[19px] -mr-3 w-36",
+    style2: "-mt-[30px] -mr-3 w-40",
     url2: card22,
   },
   {
@@ -30,7 +30,7 @@ export const SlidesArray = [
     title: "Managing social medial accounts",
     color: "bg-[#9978E0]",
     style: "mt-4 -mr-3 w-24",
-    style2: "-mt-[17px] -mr-[12px] w-32",
+    style2: "-mt-[44px] -mr-[12px] w-40",
     url2: card33,
   },
   {
@@ -38,7 +38,7 @@ export const SlidesArray = [
     title: "Search engine optimizations (SEO) and scheduling",
     color: "bg-[#8EA8CF]",
     style: "mt-4 -mr-3 w-24",
-    style2: "-mt-[19px] -mr-3 w-36",
+    style2: "-mt-[28px] -mr-3 w-40",
     url2: card44,
   },
   {
