@@ -55,7 +55,7 @@ const CarouselComponent: React.FC<CarouselProps> = ({ slides }) => {
         ))}
       </div>
 
-      <div className="absolute top-0 h-full w-full justify-between text-center flex text-black px-0 text-3xl ">
+      <div className="absolute top-0 h-full w-[93%] justify-between text-center flex text-black px-0 text-3xl ">
         <button onClick={previousSlide}>
           <BsFillArrowLeftCircleFill />
         </button>

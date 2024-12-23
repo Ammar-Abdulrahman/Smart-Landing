@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 
 const FooterComponent = () => {
   return (
-    <div className="bg-[#020A16] max-w-[1440px] mx-auto max-h-max ">
+    <div className="bg-[#020A16] mx-auto max-h-max ">
       <div className="flex justify-center text-center">
         <img
           src={veactor3}

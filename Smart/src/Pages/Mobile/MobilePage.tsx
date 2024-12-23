@@ -4,7 +4,7 @@ import screen3 from "../../Assets/images/screen3.png";
 
 const MobilePage = () => {
   return (
-    <div className="bg-[#020A16] max-w-[1440px] mx-auto min-h-screen">
+    <div className="bg-[#020A16] mx-auto min-h-screen">
       <div className="bg-[#fff] justify-center text-center rounded-b-[99px]">
         <div className="grid justify-center text-center">
           <div className="flex justify-center text-center">

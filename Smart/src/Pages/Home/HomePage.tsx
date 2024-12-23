@@ -19,7 +19,7 @@ const HomePage = () => {
   const isViewOverview = useInView(overviewRef, { once: true });
   return (
     <>
-      <div className="bg-[#020A16] max-w-[1440px] mx-auto">
+      <div className="bg-[#020A16] mx-auto min-h-[89vh]">
         <img
           src={veactor1}
           alt="Decorative Line Top Right"
@@ -29,7 +29,7 @@ const HomePage = () => {
         <img
           src={veactor2}
           alt="Decorative Line Bottom Left"
-          className="absolute -bottom-[166px] left-0 w-1/3 max-w-sm pointer-events-none hidden sm:block"
+          className="absolute -bottom-[69px] left-0 w-1/3 max-w-sm pointer-events-none hidden sm:block"
         />
 
         <div className="flex flex-col sm:flex-row p-4">
