@@ -9,6 +9,8 @@ interface SlidesType {
   color: string;
   url: string;
   style?: string;
+  url2?: string;
+  style2?:string;
 }
 
 interface CarouselProps {
@@ -17,6 +19,7 @@ interface CarouselProps {
 
 const CarouselComponent: React.FC<CarouselProps> = ({ slides }) => {
   const [current, setCurrent] = useState(0);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null); // Track the hovered card
 
   let previousSlide = () => {
     if (current === 0) setCurrent(slides.length - 1);
@@ -28,7 +31,11 @@ const CarouselComponent: React.FC<CarouselProps> = ({ slides }) => {
     else setCurrent(current + 1);
   };
   return (
-    <div className="overflow-hidden relative mt-5">
+    <div className="overflow-hidden justify-center text-center flex relative mt-5">
+      <div className="absolute top-0 left-0 h-full lg:w-20 bg-gradient-to-r from-white to-transparent z-[10] pointer-events-none"></div>
+  
+  {/* Right Gradient Overlay */}
+  <div className="absolute top-0 right-0 h-full lg:w-20 bg-gradient-to-l from-white to-transparent z-[10] pointer-events-none"></div>
       <div
         className={`flex ease-out duration-1000`}
         style={{
@@ -40,29 +47,40 @@ const CarouselComponent: React.FC<CarouselProps> = ({ slides }) => {
         {slides.map((slide: any, index: number) => (
           <div
             key={index}
-            className={`${slide.color} rounded-lg w-[50%] sm:w-48 h-56 m-2 p-2`}
+            className={`${slide.color} hover:text-[17px] rounded-lg w-[50%] sm:w-48 h-56 m-2 p-2`}
+            onMouseEnter={() => setHoveredIndex(index)} // Set hover state
+            onMouseLeave={() => setHoveredIndex(null)} // Clear hover state
           >
-            <h2 className="text-white font-semibold text-left p-2">
+            <h2 className="text-white font-semibold text-left p-2 transition-transform duration-300">
               {slide.title}
             </h2>
             <div className="flex justify-end text-left">
               <img
-                src={slide.url}
-                className={`absolute top-36 ${slide.style} p-1 w-24`}
+                src={ hoveredIndex === index ? slide.url2 :  slide.url }
+                className={`absolute top-36 ${hoveredIndex === index ? slide.style2 :  slide.style } p-1`}
               />
             </div>
           </div>
         ))}
       </div>
 
-      <div className="absolute top-0 h-full w-[93%] justify-between text-center flex text-black px-0 text-3xl ">
+      {/* <div className="absolute top-0 h-full w-[93%] justify-between text-center flex text-black px-0 text-3xl ">
         <button onClick={previousSlide}>
           <BsFillArrowLeftCircleFill />
         </button>
         <button onClick={nextSlide}>
           <BsFillArrowRightCircleFill />
         </button>
-      </div>
+      </div> */}
+
+<div className="absolute top-1/2 transform z-[30] -translate-y-1/2 w-full flex justify-between px-4">
+  <button onClick={previousSlide} className="text-black text-3xl">
+    <BsFillArrowLeftCircleFill />
+  </button>
+  <button onClick={nextSlide} className="text-black text-3xl">
+    <BsFillArrowRightCircleFill />
+  </button>
+</div>
     </div>
   );
 };
