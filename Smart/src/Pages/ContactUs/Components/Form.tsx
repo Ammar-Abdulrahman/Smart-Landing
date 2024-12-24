@@ -117,7 +117,7 @@ const ContactForm = () => {
 
     const form = event.target as HTMLFormElement;
     const name = (form.elements.namedItem("name") as HTMLInputElement).value;
-    const email = (form.elements.namedItem("email") as HTMLInputElement).value;
+    //const email = (form.elements.namedItem("email") as HTMLInputElement).value;
     const message = (form.elements.namedItem("message") as HTMLTextAreaElement)
       .value;
 
