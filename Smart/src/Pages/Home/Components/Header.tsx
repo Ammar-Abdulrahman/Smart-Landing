@@ -99,9 +99,9 @@ const Header = () => {
         <ul
           className={`${
             isScrolled ? "bg-white" : "bg-[#020A16]"
-          } grid fixed z-[80] mt-2 ${
+          } grid fixed z-[80] mt-0 ${
             isScrolled ? "text-black" : "text-white"
-          } sm:hidden justify-center text-center w-full gap-4 p-4 rounded-md`}
+          } sm:hidden justify-center text-center w-full gap-4 p-4`}
         >
           <li className="cursor-pointer" onClick={() => setIsOpen(false)}>
             <Link to="/about">Privacy Policy</Link>
