@@ -36,7 +36,7 @@ const HomePage = () => {
         />
 
         <div className="flex flex-col sm:flex-row p-4">
-          <div className="sm:w-2/3 sm:mr-0 lg:-mr-14 justify-center text-center">
+          <div className="sm:w-2/3 sm:mr-0 justify-center text-center">
             <Gallery />
           </div>
           <div className="sm:w-2/3 mt-8 sm:mr-20 justify-center text-center">

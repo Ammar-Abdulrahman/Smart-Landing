@@ -15,9 +15,9 @@ const Gallery = () => {
   ];
 
   const images2 = [
-    { image: image2, style: "w-56" },
-    { image: image4, style: "w-56" },
-    { image: image6, style: "w-56" },
+    { image: image2, style: "w-52" },
+    { image: image4, style: "w-52" },
+    { image: image6, style: "w-52" },
   ];
 
   const [isAnimating, setIsAnimating] = useState(false);
@@ -33,7 +33,8 @@ const Gallery = () => {
   return (
     <div className="flex justify-end text-right">
       <div className="grid grid-cols-2 p-4 justify-end text-right">
-        <section className="grid grid-cols-1 p-2 gap-0 w-[150%] ">
+        
+        <section className="grid grid-cols-1 p-2 gap-1 w-[105%] ">
           {images.map((image, index) => (
             <motion.div
               animate={{ scale: isAnimating ? 0.9 : 1 }}
@@ -44,13 +45,13 @@ const Gallery = () => {
               <img
                 src={image.image}
                 alt={`Gallery ${index}`}
-                className={` ${image.style} mt-1 mb-1`}
+                className={` ${image.style} m-1`}
               />
             </motion.div>
           ))}
         </section>
 
-        <section className="grid grid-cols-1 p-2 gap-0 sm:w-2/3 lg:w-1/2 justify-start text-left">
+        <section className="grid grid-cols-1 p-2 gap-1 sm:w-2/3 lg:w-1/2 justify-start text-left">
           {images2.map((image, index) => (
             <motion.div
               animate={{ scale: isAnimating ? 0.9 : 1 }}
@@ -61,7 +62,7 @@ const Gallery = () => {
               <img
                 src={image.image}
                 alt={`Gallery ${index}`}
-                className={`${image.style} mt-1 mb-1`}
+                className={`${image.style} m-1 `}
               />
             </motion.div>
           ))}
