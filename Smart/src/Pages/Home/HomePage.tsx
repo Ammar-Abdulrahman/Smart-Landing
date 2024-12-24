@@ -36,10 +36,10 @@ const HomePage = () => {
         />
 
         <div className="flex flex-col sm:flex-row p-4">
-          <div className="sm:w-1/2 sm:mr-0 lg:-mr-14 justify-center text-center">
+          <div className="sm:w-2/3 sm:mr-0 lg:-mr-14 justify-center text-center">
             <Gallery />
           </div>
-          <div className="sm:w-2/3 sm:mr-20 justify-center text-center">
+          <div className="sm:w-2/3 mt-8 sm:mr-20 justify-center text-center">
             <HeroSection />
             <Footer />
           </div>
@@ -74,7 +74,7 @@ const HomePage = () => {
         <motion.div
           initial={{ x: -400, opacity: 0 }}
           animate={isViewMobile ? { x: 0, opacity: 1 } : {}}
-          transition={{ duration: 0.9 , delay:0.5 }}
+          transition={{ duration: 0.7 , delay:0.5 }}
         >
           <MobilePage />
         </motion.div>
@@ -88,3 +88,4 @@ const HomePage = () => {
 };
 
 export default HomePage;
+//smarTmiediea@gmail.com

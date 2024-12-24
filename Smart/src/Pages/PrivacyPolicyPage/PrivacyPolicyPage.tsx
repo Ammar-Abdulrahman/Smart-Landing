@@ -2,7 +2,7 @@
 import dataPrivacy from "./Helper/PrivacyData.json";
 const PrivacyPolicyPage = () => {
   return (
-    <div className="bg-gray-300 mx-auto min-h-screen">
+    <div className="bg-gray-300 mx-auto min-h-screen mt-20">
       <div className="flex justify-center text-left">
         <div className="m-4 p-8 rounded-lg grid w-3/4 bg-white shadow-lg shadow-[#020A16] overflow-scroll">
           <div className="">

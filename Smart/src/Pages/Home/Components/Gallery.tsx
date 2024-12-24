@@ -9,12 +9,15 @@ import { motion } from "framer-motion";
 
 const Gallery = () => {
   const images = [
-    { image: image1, style: "w-64 h-40" },
-    { image: image2, style: "w-44 h-40" },
-    { image: image3, style: "w-64 h-40" },
-    { image: image4, style: "w-44 h-40" },
-    { image: image5, style: "w-64 h-40" },
-    { image: image6, style: "w-44 h-40" },
+    { image: image1, style: "w-64" },
+    { image: image3, style: "w-64" },
+    { image: image5, style: "w-64" },
+  ];
+
+  const images2 = [
+    { image: image2, style: "w-56" },
+    { image: image4, style: "w-56" },
+    { image: image6, style: "w-56" },
   ];
 
   const [isAnimating, setIsAnimating] = useState(false);
@@ -28,22 +31,43 @@ const Gallery = () => {
   }, []);
 
   return (
-    <section className="grid grid-cols-2 gap-0 sm:ml-24 p-4">
-      {images.map((image, index) => (
-        <motion.div
-          animate={{ scale: isAnimating ? 0.9 : 1 }}
-          transition={{ duration: 0.9, ease: "easeInOut" }}
-          key={index}
-          className=" flex justify-center"
-        >
-          <img
-            src={image.image}
-            alt={`Gallery ${index}`}
-            className={`${image.style} m-1`}
-            />
-        </motion.div>
-      ))}
-    </section>
+    <div className="flex justify-end text-right">
+      <div className="grid grid-cols-2 p-4 justify-end text-right">
+        <section className="grid grid-cols-1 p-2 gap-0 w-[150%] ">
+          {images.map((image, index) => (
+            <motion.div
+              animate={{ scale: isAnimating ? 0.9 : 1 }}
+              transition={{ duration: 0.9, ease: "easeInOut" }}
+              key={index}
+              className=" flex justify-center"
+            >
+              <img
+                src={image.image}
+                alt={`Gallery ${index}`}
+                className={` ${image.style} mt-1 mb-1`}
+              />
+            </motion.div>
+          ))}
+        </section>
+
+        <section className="grid grid-cols-1 p-2 gap-0 sm:w-2/3 lg:w-1/2 justify-start text-left">
+          {images2.map((image, index) => (
+            <motion.div
+              animate={{ scale: isAnimating ? 0.9 : 1 }}
+              transition={{ duration: 0.9, ease: "easeInOut" }}
+              key={index}
+              className=" flex justify-center"
+            >
+              <img
+                src={image.image}
+                alt={`Gallery ${index}`}
+                className={`${image.style} mt-1 mb-1`}
+              />
+            </motion.div>
+          ))}
+        </section>
+      </div>
+    </div>
   );
 };
 
