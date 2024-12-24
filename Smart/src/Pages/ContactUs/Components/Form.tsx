@@ -121,9 +121,9 @@ const ContactForm = () => {
     const message = (form.elements.namedItem("message") as HTMLTextAreaElement)
       .value;
 
-    const mailtoLink = `mailto:ammarabdulrahmman@gmail.com?subject=${encodeURIComponent(
+    const mailtoLink = `mailto:smarTmiediea@gmail.com?subject=${encodeURIComponent(
       name
-    )}&body=${encodeURIComponent(`Message: ${message}\nEmail: ${email}`)}`;
+    )}&body=${encodeURIComponent(`${message}\n`)}`;
 
     window.location.href = mailtoLink;
   };

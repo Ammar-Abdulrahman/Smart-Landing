@@ -88,4 +88,3 @@ const HomePage = () => {
 };
 
 export default HomePage;
-//smarTmiediea@gmail.com
