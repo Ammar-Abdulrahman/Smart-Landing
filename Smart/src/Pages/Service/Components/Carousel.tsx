@@ -3,7 +3,7 @@ import {
   BsFillArrowLeftCircleFill,
   BsFillArrowRightCircleFill,
 } from "react-icons/bs";
-import { motion } from "framer-motion";
+//import { motion } from "framer-motion";
 import { items } from "../../OurServices/Tests";
 
 const CarouselComponent: React.FC = () => {
@@ -24,7 +24,7 @@ const CarouselComponent: React.FC = () => {
   };
 
   return (
-     <div className="overflow-hidden justify-center text-center flex relative mt-5">
+    <div className="overflow-hidden justify-center text-center flex relative mt-5">
       {/* Left Gradient Overlay */}
 
       <div className="absolute top-0 left-0 h-full w-8 sm:w-10 lg:w-24 bg-gradient-to-r from-white to-transparent z-[10]"></div>
