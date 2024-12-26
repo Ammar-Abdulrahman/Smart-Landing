@@ -14,7 +14,7 @@ import { useRef } from "react";
 
 const HomePage = () => {
   const mobileRef = useRef(null);
-  const isViewMobile = useInView(mobileRef, { once: true });
+  //const isViewMobile = useInView(mobileRef, { once: true });
 
   const overviewRef = useRef(null);
   const isViewOverview = useInView(overviewRef, { once: true });
@@ -73,13 +73,9 @@ const HomePage = () => {
       </div>
 
       <div className="mt-20 rounded-full" ref={mobileRef}>
-        <motion.div
-          initial={{ x: -400, opacity: 0 }}
-          animate={isViewMobile ? { x: 0, opacity: 1 } : {}}
-          transition={{ duration: 0.7, delay: 0.5 }}
-        >
+        <div>
           <MobilePage />
-        </motion.div>
+        </div>
       </div>
 
       <div className="">
