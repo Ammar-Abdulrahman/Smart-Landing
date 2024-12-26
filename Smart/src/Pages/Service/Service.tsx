@@ -1,6 +1,4 @@
 import CarouselComponent from "./Components/Carousel";
-//import { slides } from "./Helper";
-//import Cards from "../Service/Components/CardContianer"
 
 const OurServicesPage = () => {
   return (

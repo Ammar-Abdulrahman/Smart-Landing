@@ -11,18 +11,39 @@ interface CardProps {
 
 interface ComponentProps {
   cards: CardProps[];
+  isVisible: boolean;
 }
 
-const Card: React.FC<ComponentProps> = ({ cards }) => {
+const Card: React.FC<ComponentProps> = ({ cards, isVisible }) => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2, // تأخير بين كل بطاقة
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50 }, // مخفي ونازل لأسفل
+    visible: { opacity: 1, y: 0 }, // يظهر ويتحرك للأعلى
+  };
+
   return (
-    <div className="flex flex-wrap justify-center gap-4">
-      {cards.map((card: CardProps) => (
+    <motion.div
+      className="flex flex-wrap justify-center gap-4"
+      variants={containerVariants}
+      initial="hidden"
+      animate={isVisible ? "visible" : "hidden"} // تشغيل الأنيميشن عند عرض القسم
+    >
+      {cards.map((card: CardProps, index) => (
         <motion.div
-          whileHover={{ scale: 1.1 }}
-          initial={{ x: -200 }}
-          animate={{ x: 0 }}
+          key={index}
+          variants={cardVariants} // تطبق على كل بطاقة
           transition={{ duration: 0.7 }}
           className={`bg-white border w-68 sm:w-72 lg:w-64 m-2 p-4 rounded-lg`}
+          whileHover={{ scale: 1.1 }}
           style={{
             boxShadow: `-5px 10px 25px ${card.color}`,
           }}
@@ -49,7 +70,7 @@ const Card: React.FC<ComponentProps> = ({ cards }) => {
           </div>
         </motion.div>
       ))}
-    </div>
+    </motion.div>
   );
 };
 

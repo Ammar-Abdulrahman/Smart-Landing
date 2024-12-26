@@ -2,6 +2,7 @@ import HeroSection from "./Components/HeroSection";
 import Gallery from "./Components/Gallery";
 import Footer from "./Components/Footer";
 import OurServicesPage from "../OurServices/OurServicesPage";
+import ServicesPage from "../Service/Service";
 import ContactUsPage from "../ContactUs/ContactUsPage";
 import CustomerPage from "../Customer/CustomerPage";
 import MobilePage from "../Mobile/MobilePage";
@@ -50,9 +51,10 @@ const HomePage = () => {
         <motion.div
           initial={{ x: -400, opacity: 0 }}
           animate={isViewOverview ? { x: 0, opacity: 1 } : {}}
-          transition={{ duration: 0.9 , delay:0.5}}
+          transition={{ duration: 0.9, delay: 0.5 }}
         >
-          <OurServicesPage />
+          {/* <OurServicesPage /> */}
+          <ServicesPage />
         </motion.div>
       </div>
 
@@ -62,11 +64,11 @@ const HomePage = () => {
 
       <div className="customer" ref={customerRef}>
         <motion.div
-          initial={{ x: -400, opacity: 0 }}
-          animate={isViewCustomer ? { x: 0, opacity: 1 } : {}}
-          transition={{ duration: 0.9, delay: 0.5 }}
+          initial={{ opacity: 0 }}
+          animate={isViewCustomer ? { opacity: 1 } : {}}
+          transition={{ duration: 0.7, delay: 0.3 }}
         >
-          <CustomerPage />
+          <CustomerPage isVisible={isViewCustomer} />
         </motion.div>
       </div>
 
@@ -74,7 +76,7 @@ const HomePage = () => {
         <motion.div
           initial={{ x: -400, opacity: 0 }}
           animate={isViewMobile ? { x: 0, opacity: 1 } : {}}
-          transition={{ duration: 0.7 , delay:0.5 }}
+          transition={{ duration: 0.7, delay: 0.5 }}
         >
           <MobilePage />
         </motion.div>
