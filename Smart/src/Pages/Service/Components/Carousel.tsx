@@ -9,7 +9,7 @@ import { items } from "../../OurServices/Tests";
 const CarouselComponent: React.FC = () => {
   const [current, setCurrent] = useState(0);
   const isMobile = window.innerWidth < 768;
-  const slidesToShow = isMobile ? 1 : 3;
+  const slidesToShow = isMobile ? 1.5 : 3;
 
   const previousSlide = () => {
     if (current > 0) {
@@ -36,13 +36,13 @@ const CarouselComponent: React.FC = () => {
           className="flex transition-transform duration-500"
           style={{
             transform: `translateX(-${
-              current * (window.innerWidth >= 1024 ? 2 : 15)
+              current * (window.innerWidth >= 1024 ? 2 : 20)
             }%)`,
             width: `${(items.length / slidesToShow) * 130}%`,
           }}
         >
-          {items.map((item) => (
-            <>{item.itemNode}</>
+          {items.map((item, index) => (
+            <div key={index}>{item.itemNode}</div>
           ))}
         </div>
       </div>
